@@ -1,0 +1,237 @@
+li{
+    list-style: none;
+}
+
+.menu-container {
+    background-color: #4B205A;
+    height: 8rem;
+    width: 100%;
+    
+}
+
+header{
+    width: 100%;
+    height: 7.5rem;
+}
+
+.nav-a {
+    color: #E8E4E3;
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-decoration: underline #004F7A;
+}
+
+.nav-a:hover{
+    color:#004F7A;
+}
+
+.itemMenu {
+    display: none;
+}
+
+@media screen and (max-width:900px) {
+
+    header {
+        position: fixed;
+        top: 1rem;
+        left: 2rem;
+        height: 7.5rem;
+        z-index: 9;
+        margin-top: 0;
+    }
+    .menu-container {
+        background-color: transparent;
+    }
+
+    #burger {
+        position: fixed;
+        width: 5rem;
+        height: 5rem;
+        top: 1rem;
+        left: 2.5rem;
+        border-radius: 50%;
+        background-color: #4B205A;
+        float: left;
+    }
+
+    #burger:hover {
+        cursor: pointer;
+    }
+
+    .headerIcon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 22px;
+        height: 2px;
+        transform: translate(-50% , -50% );
+        background-color: #E8E4E3;
+    }
+
+    .headerIcon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #E8E4E3;
+        transform: translateY(-6px);
+        transition: transform 0.5s;
+    }
+
+    .headerIcon::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #E8E4E3;
+        transform: translateY(6px);
+        transition: transform 0.5s;
+    }
+
+    .headerIcon::before :hover {
+        transform: translateY(8px);
+    }
+
+    .headerIcon::after :hover {
+        transform: translateY(-8px);
+    }
+
+
+    #menu {
+        opacity: 0;
+        transition: all 0.5s ease;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 2%;
+        width: 80px !important;
+        transform: translateY(-185px);
+    }
+
+    .big {
+        display: none;
+    }
+
+    .itemMenu {
+        display: block;
+        position: relative;
+        width: 5rem;
+        height: 5rem;
+        line-height: 2.5rem;
+        text-align: center;
+        color: #E8E4E3;
+    }
+
+    .itemMenu a img {
+        width: 100%;
+    }
+
+    .logo_nav img {
+        margin-top: 100%;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .with--sidebar .site-cache {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    #burger:hover .headerIcon,
+    #burger:hover .headerIcon::before,
+    #burger:hover .headerIcon::after {
+        background-color: #E8E4E3;
+    }
+
+    .headerIcon::before:hover {
+        transform: translateY(-8px);
+    }
+
+    .headerIcon::after:hover {
+        transform: translateY(8px);
+    }
+
+    .with--sidebar #menuContainer {
+        background-color: #E8E4E3;
+        width: 12rem;
+        height: 32rem;
+    }
+
+    .with--sidebar #burger {
+        left: 3.5rem;
+        top: 1rem;
+        background-color: transparent;
+        z-index: 2;
+    }
+
+    .with--sidebar #menu {
+        opacity: 0.7;
+        width: 80px !important;
+        height: 400px !important;
+        transition: all 0.5s ease;
+        position: absolute;
+        left: 0;
+        top: 1rem;
+        bottom: 0;
+        margin: 2%;
+        background-color: #E8E4E3;
+        transform: translateY(-15px);
+        flex-direction: column;
+        font-size: 1rem;
+        padding-top: 1%;
+        border-radius: 20rem;
+        justify-content: space-around !important;
+    }
+
+   
+    .nav-link {
+        color: #4B205A;
+    }
+
+
+
+    /* debutCrossAnimation */
+
+    .with--sidebar #burger:hover .headerIcon {
+        background-color: transparent;
+    }
+
+    .with--sidebar .headerIcon {
+        background: transparent;
+    }
+
+    .with--sidebar .headerIcon::before {
+        
+        transform: translate(-50%, 0) rotate(45deg);
+        background-color: #E8E4E3;
+    }
+
+    .with--sidebar .headerIcon::after {
+        transform: translate(-50%, 0) rotate(-45deg);
+        background-color: #E8E4E3;
+    }
+
+    .with--sidebar .headerIcon::before,
+    .with--sidebar .headerIcon::after {
+        transform-origin: 50% 50%;
+        background-color: #4B205A !important;
+    }
+
+    .with--sidebar .headerIcon {
+        transition: background 0.5s;
+    }
+
+
+}
